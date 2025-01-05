@@ -5,9 +5,8 @@ from sklearn.preprocessing import  MinMaxScaler
 def get_data():
 
 
-    data = np.load('./traffic_data/bs_beijing.npz')['bs_record']
-    observed_values=data[0:960,0:168]
-    observed_values = np.clip(observed_values,0,0.3)
+    data = np.load('./traffic_data/beijing.npz')['bs_record']
+    observed_values=data
     observed_values = np.expand_dims(observed_values, axis=-1)
     return observed_values
 
