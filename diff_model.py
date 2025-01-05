@@ -7,9 +7,9 @@ import dgl
 import dgl.function as fn
 
 
-kg=np.load('./traffic_data/bs_beijing.npz')['bs_kge']
-adj_lists_train = np.load('citydata/dis_nor_beijing_train_960.npz')['res']
-poi_list =  np.load('citydata/poi_nor_beijing_train_960.npz')['res']
+kg=np.load('./traffic_data/beijing.npz')['bs_kge']
+adj_lists_train = np.load('citydata/dis_nor_beijing.npz')['res']
+poi_list =  np.load('citydata/poi_nor_beijing.npz')['res']
 
 src_full, dst_full = np.where(adj_lists_train > 0)
 src_full_p, dst_full_p = np.where(poi_list > 0)
