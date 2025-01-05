@@ -1,0 +1,26 @@
+
+#type: args
+
+train:
+  epochs: 100
+  batch_size: 64
+  lr: 1.0e-3
+
+diffusion:
+  layers: 8
+  channels: 64
+  nheads: 8
+  diffusion_embedding_dim: 64
+  beta_start: 0.0001
+  beta_end: 0.01
+  num_steps: 1000
+  schedule: "quad"
+  activation: 'gelu'
+  freq_select: 4
+  kg_emb: 32
+
+model:
+  timeemb: 128
+
+
+
