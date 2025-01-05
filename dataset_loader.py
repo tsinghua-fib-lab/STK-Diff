@@ -69,7 +69,7 @@ def get_dataloader(seed=1, batch_size=16):
         use_index_list=test_indices,
         seed=seed
     )
-    # 创建数据加载器
+    
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True,drop_last=True)
     valid_loader = DataLoader(valid_dataset, batch_size=batch_size, shuffle=False,drop_last=True)
     test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False,drop_last=True)
